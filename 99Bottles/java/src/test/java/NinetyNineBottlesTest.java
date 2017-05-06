@@ -13,63 +13,55 @@ public class NinetyNineBottlesTest {
 
     @Test public void first_verse() {
         String expected =
-                "99 bottles of beer on the wall, " +
-                "99 bottles of beer.\n" +
-                "Take one down and pass it around, " +
-                "98 bottles of beer on the wall.\n";
+                "99 bottles of beer on the wall, 99 bottles of beer.\n" +
+                "Take one down and pass it around, 98 bottles of beer on the wall.\n";
         assertEquals(expected, subject.verse(99));
     }
 
-//    @Test public void another_verse() {
-//        String expected =
-//                "3 bottles of beer on the wall, " +
-//                "3 bottles of beer.\n" +
-//                "Take one down and pass it around, " +
-//                "2 bottles of beer on the wall.\n";
-//        assertEquals(expected, subject.verse(3));
-//    }
-//
-//    @Test public void verse_2() {
-//        String expected =
-//                "2 bottles of beer on the wall, " +
-//                "2 bottles of beer.\n" +
-//                "Take one down and pass it around, " +
-//                "1 bottle of beer on the wall.\n";
-//        assertEquals(expected, subject.verse(2));
-//    }
-//
-//    @Test public void verse_1() {
-//        String expected =
-//                "1 bottle of beer on the wall, " +
-//                "1 bottle of beer.\n" +
-//                "Take it down and pass it around, " +
-//                "no more bottles of beer on the wall.\n";
-//        assertEquals(expected, subject.verse(1));
-//    }
-//
-//    @Test public void verse_1() {
-//        String expected =
-//                "No more bottles of beer on the wall, no more bottles of beer.\n" +
-//                "Go to the store and buy some more, 99 bottles of beer on the wall.\n";
-//        assertEquals(expected, subject.verse(0));
-//    }
-//
-//    @Test public void a_couple_verses() {
-//        String expected =
-//                "2 bottles of beer on the wall, 2 bottles of beer.\n" +
-//                "Take one down and pass it around, 1 bottle of beer on the wall.\n" +
-//                "\n" +
-//                "1 bottle of beer on the wall, 1 bottle of beer.\n" +
-//                "Take it down and pass it around, no more bottles of beer on the wall.\n" +
-//                "\n" +
-//                "No more bottles of beer on the wall, no more bottles of beer.\n" +
-//                "Go to the store and buy some more, 99 bottles of beer on the wall.\n";
-//        assertEquals(expected, subject.verses(2, 0));
-//    }
-//
-//    @Test public void whole_song() {
-//        assertEquals(getFullSong(), subject.song());
-//    }
+    @Test public void another_verse() {
+        String expected =
+                "3 bottles of beer on the wall, 3 bottles of beer.\n" +
+                "Take one down and pass it around, 2 bottles of beer on the wall.\n";
+        assertEquals(expected, subject.verse(3));
+    }
+
+    @Test public void verse_2() {
+        String expected =
+                "2 bottles of beer on the wall, 2 bottles of beer.\n" +
+                "Take one down and pass it around, 1 bottle of beer on the wall.\n";
+        assertEquals(expected, subject.verse(2));
+    }
+
+    @Test public void verse_1() {
+        String expected =
+                "1 bottle of beer on the wall, 1 bottle of beer.\n" +
+                "Take it down and pass it around, no more bottles of beer on the wall.\n";
+        assertEquals(expected, subject.verse(1));
+    }
+
+    @Test public void verse_0() {
+        String expected =
+                "No more bottles of beer on the wall, no more bottles of beer.\n" +
+                "Go to the store and buy some more, 99 bottles of beer on the wall.\n";
+        assertEquals(expected, subject.verse(0));
+    }
+
+    @Test public void a_couple_verses() {
+        String expected =
+                "2 bottles of beer on the wall, 2 bottles of beer.\n" +
+                "Take one down and pass it around, 1 bottle of beer on the wall.\n" +
+                "\n" +
+                "1 bottle of beer on the wall, 1 bottle of beer.\n" +
+                "Take it down and pass it around, no more bottles of beer on the wall.\n" +
+                "\n" +
+                "No more bottles of beer on the wall, no more bottles of beer.\n" +
+                "Go to the store and buy some more, 99 bottles of beer on the wall.\n";
+        assertEquals(expected, subject.verses(2, 0));
+    }
+
+    @Test public void whole_song() {
+        assertEquals(getFullSong(), subject.song());
+    }
 
     private String getFullSong() {
         return "99 bottles of beer on the wall, 99 bottles of beer.\n" +
@@ -370,6 +362,6 @@ public class NinetyNineBottlesTest {
                "Take it down and pass it around, no more bottles of beer on the wall.\n\n" +
 
                "No more bottles of beer on the wall, no more bottles of beer.\n" +
-               "Go to the store and buy some more, 99 bottles of beer on the wall.";
+               "Go to the store and buy some more, 99 bottles of beer on the wall.\n";
     }
 }
