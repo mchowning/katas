@@ -1,14 +1,23 @@
-import org.junit.Before
 import org.junit.Test
 import org.junit.Assert.*
+import org.junit.Before
+import org.junit.runner.RunWith
+import org.junit.runners.Parameterized
 
-class NinetyNineBottlesTest {
+@RunWith(Parameterized::class)
+class NinetyNineBottlesTest(val nnBottlesImpl: () -> NinetyNineBottles) {
 
-    private lateinit var subject: NinetyNineBottles
+    companion object {
+        @JvmStatic
+        @Parameterized.Parameters(name = "{0}")
+        fun data() : Array<() -> NinetyNineBottles> = arrayOf({ Simple() },
+                                                              { OverEngineered() })
+    }
 
-    @Before
-    fun setUp() {
-        subject = NinetyNineBottles()
+    lateinit var subject: NinetyNineBottles
+
+    @Before fun setUp() {
+        subject = nnBottlesImpl()
     }
 
     @Test fun first_verse() {
